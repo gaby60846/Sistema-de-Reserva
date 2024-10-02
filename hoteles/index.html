@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/table.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Marketing - Hoteles</title>
+        <style>
+            .nav-link {
+                color: #6C757D;
+            }
+
+            #reserva {
+                color: #fff;
+                background-color: #007BFF;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="d-flex flex-column flex-shrink-0 p-3 text-secondary min-vh-100 bg-light" id="navbar" style="width: 280px;">
+                    
+                </div>
+                <div class="col py-3">
+                    <nav class="navbar navbar-light bg-light row" id="header">
+
+                    </nav>
+                    <div class="content">
+                        <div class="row m-auto">
+                            <div class="col-10">
+                                <h3>Hoteles Registrados</h3>
+                            </div>
+                            <button type="button" id="verInforme" class="col-2 btn btn-primary" data-toggle="modal">
+                                <i class="bi bi-cloud-download col-2"></i> Generar Informe
+                            </button>
+                        </div>
+                        <div class="content-table">
+                            <table class="table table-striped table-hover bg-light text-center">
+                                <thead class="bg-primary text-light">
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Ubicación</th>
+                                        <th>Puntuación</th>
+                                        <th>Opiniones</th>
+                                        <th>Rango</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Eurobuilding Hotel and Suites</td>
+                                        <td>Caracas</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>2902 opiniones</td>
+                                        <td>#1</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal" id="verHotel"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ara Merú Lodge</td>
+                                        <td>Parque Nacional Canaima</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>144 opiniones</td>
+                                        <td>#2</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Posada Margot</td>
+                                        <td>Tucacas</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>450 opiniones</td>
+                                        <td>#3</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hotel Isla Caribe</td>
+                                        <td>Margarita</td>
+                                        <td>4 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>3557 opiniones</td>
+                                        <td>#4</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>JW Marriott Hotel Caracas</td>
+                                        <td>Caracas</td>
+                                        <td>4 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>1863 opiniones</td>
+                                        <td>#5</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wyndham Concorde</td>
+                                        <td>Margarita</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>1674 opiniones</td>
+                                        <td>#6</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Posada Don Elicio</td>
+                                        <td>La Colonia Tovar</td>
+                                        <td>5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>293 opiniones</td>
+                                        <td>#7</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunsol Ecoland & Beach Resort</td>
+                                        <td>Margarita</td>
+                                        <td>4 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>2704 opiniones</td>
+                                        <td>#8</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>H2otel By LD</td>
+                                        <td>Playa El Agua</td>
+                                        <td>5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>200 opiniones</td>
+                                        <td>#9</td>
+                                        <td class="row">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Posada Los Roques</td>
+                                        <td>Parque Nacional Los Roques</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td>410 opiniones</td>
+                                        <td>#10</td>
+                                        <td class="row table-button">
+                                            <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            <div class="col-1"></div>
+                                            <button type="button" class="col btn btn-primary" data-toggle="modal"><i class="bi bi-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="content-pagination">
+                            <nav aria-label="Page navigation example" class="navigation">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de Hotel -->
+        <div class="modal fade" id="infoHotel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Eurobuilding Hotel and Suites</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half  text-warning"></i> 2908 opiniones</p>
+                        <p><i class="bi bi-geo-alt-fill text-primary"></i> Final Calle La Guairita, 1060 Caracas, Venezuela</p>
+                        <img src="../img/eurobuilding-1.jpg" alt="..." class="img-thumbnail col">
+                        <div class="row">
+                            <img src="../img/eurobuilding-2.jpg" alt="..." class="rounded col" width="50px" height="120px">
+                            <img src="../img/eurobuilding-3.jpg" alt="..." class="rounded col" width="50px" height="120px">
+                        </div>
+                        <p>El Eurobuilding Hotel & Suites Caracas se encuentra a 15 minutos en coche del centro de la ciudad, en el distrito financiero. Dispone de habitaciones elegantes, piscina, gimnasio y sauna.</p>
+                        <h6>Servicios más populares</h6>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-wifi"></i> WiFi gratis</p>
+                            <p class="col text-primary"><i class="bi bi-p-circle"></i> Estacionamiento gratis</p>
+                        </div>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-cup-hot"></i> Desayuno incluido</p>
+                            <p class="col text-primary"><i class="bi bi-basket"></i> Servicio a la habitación</p>
+                        </div>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-person-add"></i> Habitaciones familiares</p>
+                            <p class="col text-primary"><i class="bi bi-cup-straw"></i> Bar</p>
+                        </div>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-person-wheelchair"></i> Adaptado personas de movilidad reducida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de informe -->
+        <div class="modal fade" id="informe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Reporte</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="reporte_general.php" method="GET">
+                        <div class="modal-body row">
+                            <div class="col">
+                                <label for="fecha_ini">Inicio</label>
+                                <input type="date" class="form-control" name="fecha_ini" id="fecha_ini">
+                            </div>
+                            <div class="col">
+                            <label for="fecha_final">Fin</label>
+                                <input type="date" class="form-control" name="fecha_final" id="fecha_final">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Generar Informe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            $("#navbar").load("../bars/navbar.html");
+            $("#header").load("../bars/header.html");
+            $(document).ready(function() {
+                $("#verHotel").click(function() {
+                    $("#infoHotel").modal('show');
+                });
+            });
+            $(document).ready(function() {
+                $("#verInforme").click(function() {
+                    $("#informe").modal('show');
+                });
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../css/user.css">
+        <title>Marketing y Ventas - Iniciar Sesión</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="item header" id="header">
+            </div>
+            <div class="container-form">
+                <div class="container-form-button">
+                    <div class="container-form-button-elegir" id="elegir"></div>
+                    <button type="button" class="container-form-button-boton" onclick="login()">Iniciar Sesión</button>
+                    <button type="button" class="container-form-button-boton" onclick="sing_up()">Registrar</button>
+                </div>
+                <form action="../dashboard/index.html" class="container-form-group" id="login" method="POST">
+                    <input type="text" class="container-form-group-input" id="input__email" name="email" placeholder="Ingrese su correo electrónico">
+                    <input type="password" class="container-form-group-input" id="input__password" name="password" placeholder="Ingrese su contraseña">
+                    <input type="checkbox" class="container-form-group-checkbox" name="remember"><span>Recordar Usuario</span>
+                    <button type="submit" class="container-form-group-boton" id="acceder" onclick="login()">Acceder</button>
+                </form>   
+                <form action="../dashboard/index.html" class="container-form-group" id="sing_up" method="POST">
+                    <input type="email" class="container-form-group-input" id="input-email" name="email" placeholder="Correo">
+                    <input type="text" class="container-form-group-input" id="input-name" name="name" placeholder="Nombre">
+                    <input type="text" class="container-form-group-input" id="input-lastname" name="lastname" placeholder="Apellido">
+                    <input type="password" class="container-form-group-input" id="input-password" name="password" placeholder="Contraseña">
+                    <input type="password" class="container-form-group-input" id="input-password_confirmation" name="password_confirmation" placeholder="Confirmar Contraseña">
+                    <button type="submit" class="container-form-group-boton" id="registrer" onclick="sing_up()">Registrar</button>
+                </form>
+            </div>
+            <div class="item footer" id="footer">
+            </div>
+        </div>
+        <script>
+            $("#header").load("../bars/navigation.html");
+            $("#footer").load("../bars/footer.html");
+            
+            var x = document.getElementById('login');
+            var y = document.getElementById("sing_up");
+            var z = document.getElementById("elegir");
+            
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+
+            function sing_up(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "120px";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Proyecto Marketing</title>
+        <style>
+            .nav-link {
+                color: #6C757D;
+            }
+
+            #dashboard-a a{
+                color: #fff;
+                background-color: #007BFF;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="d-flex flex-column flex-shrink-0 p-3 text-secondary min-vh-100 bg-light" id="navbar" style="width: 280px;">
+                    
+                </div>
+                <div class="col py-3">
+                    <nav class="navbar navbar-light bg-light row" id="header">
+
+                    </nav>
+                    <div class="content">
+                        <div class="row m-auto">
+                            <div class="col-7">
+                                <div>Khadgar</div>
+                                <div class="text-secondary container-graphic-text">Tú última sesión fue <span id="fecha"></span></div>
+                            </div>
+                            <div class="col">
+                                <input type="date" class="form-control" id="select_fecha">
+                            </div>
+                            <a href="#" class="share bg-light border border-1 col-2">
+                                <div class="row m-auto">
+                                    <i class="bi bi-cloud-download col-2"></i>
+                                    <p class="col">Exportar</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row m-auto fisrt-row">
+                            <div class="card card-1 col-5 m-auto graphic-container">
+                                <p class="graphic-title">Ciudades más visitados</p>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <canvas id="myChart1" class="pastel"></canvas>
+                                    </div>
+                                    <div class="col-8">
+                                        <ul>
+                                            <li>
+                                                <div class="row container-graphic-text">
+                                                    <div class="col-8">Caracas</div>
+                                                    <div class="col text-secondary graphic-text">606,23$</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row container-graphic-text">
+                                                    <div class="col">Valencia</div>
+                                                    <div class="col text-secondary graphic-text">505,19$</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row container-graphic-text">
+                                                    <div class="col">Barquisimeto</div>
+                                                    <div class="col text-secondary graphic-text">353,63$</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row container-graphic-text">
+                                                    <div class="col">Margarita</div>
+                                                    <div class="col text-secondary graphic-text">168,40$</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row container-graphic-text">
+                                                    <div class="col">Otras ciudades</div>
+                                                    <div class="col text-secondary graphic-text">50,52$</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-1 col-3 m-auto graphic-container">
+                                <p class="graphic-title">Nivel de reserva</p>
+                                <br>
+                                <div class="row">
+                                    <div class="col-5"><h4><i class="bi bi-check2-circle text-success"></i> 152</h4></div>
+                                    <div class="col container-graphic-text graphic-text">Reservas del año</div>
+                                </div>
+                                <div><hr></div>
+                                <div class="row">
+                                    <div class="col-5"><h4><i class="bi bi-x-circle text-danger"></i> 48</h4></div>
+                                    <div class="col container-graphic-text graphic-text">Cancelaciones del año</div>
+                                </div>
+                            </div>
+                            <div class="card card-1 col-3 m-auto graphic-container">
+                                <p class="graphic-title">Nivel de ingresos del mes</p>
+                                <div class="row container-graphic-text">
+                                    <div class="col-8">Tiempo de actividad</div>
+                                    <div class="col text-secondary graphic-text">16 días</div>
+                                </div>
+                                <div class="row container-graphic-text">
+                                    <div class="col">Primer ingreso</div>
+                                    <div class="col text-secondary graphic-text">03 de Septiembre</div>
+                                </div>
+                                <div class="row container-graphic-text">
+                                    <div class="col">Mayor ingreso</div>
+                                    <div class="col text-secondary graphic-text">09 de Septiembre</div>
+                                </div>
+                                <div class="row container-graphic-text">
+                                    <div class="col">Cantidad del mes</div>
+                                    <div class="col text-secondary graphic-text">151,56S$</div>
+                                </div>
+                                <br>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row m-auto second-row">
+                            <div class="card card-2 col-3 m-auto graphic-container">
+                                <p class="graphic-title">Mejores Clientes</p>
+                                <div class="text-secondary"><b>Ingresos obtenidos del año</b></div>
+                                <div class="row">
+                                    <p>
+                                        <div class="col-8 text-primary">Elliot Stabler</div>
+                                        <div class="col">879,74$</div>
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        <div class="col-8 text-primary">Olivia Benson</div>
+                                        <div class="col">694,47$</div>
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        <div class="col-8 text-primary">John Munch</div>
+                                        <div class="col">498,47$</div>
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        <div class="col-8 text-primary">Odafin Tutuola</div>
+                                        <div class="col">369,74$</div>
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        <div class="col-8 text-primary">Donald Cragen</div>
+                                        <div class="col">305,78$</div>
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        <div class="col-8 text-primary">George Huang</div>
+                                        <div class="col">256,25$</div>
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p>
+                                        <div class="col-8 text-primary">Melinda Warner</div>
+                                        <div class="col">198,36$</div>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card card-2 col-5 m-auto graphic-container">
+                                <p class="graphic-title">Ingresos por eventos</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div>Hoteles</div>
+                                        <h5 class="text-primary">708,30$</h5>
+                                    </div>
+                                    <div class="col">
+                                        <div>Restaurantes</div>
+                                        <h5 class="text-success">350,35$</h5>
+                                    </div>
+                                    <div class="col">
+                                        <div>Parques</div>
+                                        <h5 class="text-danger">422,19$</h5>
+                                    </div>
+                                    <div class="col">
+                                        <div>Transporte</div>
+                                        <h5 class="text-warning">203,12$</h5>
+                                    </div>
+                                </div>
+                                <div><hr></div>
+                                <div class="row">
+                                    <canvas id="myLineChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="card card-2 col-3 m-auto graphic-container">
+                                <p class="graphic-title">Ingresos por año</p>
+                                <div class="graphic-bar-text">
+                                    <div>Total de ganancia</div>
+                                    <div class="text-secondary"><b>1683,96$</b></div>
+                                    <div class="container-graphic-text"><b>78% de ganancias del año</b></div>
+                                </div>
+                                <div><hr></div>
+                                <div class="graphic-bar-text">
+                                    <div>Total de pérdida</div>
+                                    <div class="text-secondary"><b>405,03$</b></div>
+                                    <div class="container-graphic-text"><b>22% de pérdidas del año</b></div>
+                                </div>
+                                <div class="row graphic-bar">
+                                    <canvas id="myBarChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            $("#navbar").load("../bars/navbar.html");
+            $("#header").load("../bars/header.html");
+            //Fecha Actual
+            const f = new Date();
+            document.getElementById('fecha').textContent = f.toLocaleDateString();
+            console.log(f.toLocaleDateString());
+            
+
+            //Gráficos
+            let ctx = document.getElementById('myChart');
+            let ctx1 = document.getElementById('myChart1');
+            let ctx2 = document.getElementById('myLineChart');
+            let ctx3 = document.getElementById('myBarChart');
+
+            //Ejecutar
+            grafico_pastel();
+            grafico_line();
+            grafico_stacked();
+
+            //Gráfico 2
+            function grafico_pastel(){
+                var xValues = ["Caracas", "Valencia", "Barquisimeto", "Margarita", "Otras ciudades"];
+                var yValues = [36, 31, 21, 10, 3];
+                var barColors = [
+                    "#b91d47",
+                    "#00aba9",
+                    "#2b5797",
+                    "#e8c3b9",
+                    "#1e7145"
+                ];
+                new Chart(ctx1, {
+                    type: 'pie',
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'buttom',
+                            },
+                        }
+                    },
+                });
+            }
+
+            //Gráfico Área
+            function grafico_line(){
+                const xValues = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre"];
+        
+                new Chart("myLineChart", {
+                    type: "line",
+                    data: {
+                        labels: xValues,
+                        datasets: [
+                            { 
+                                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                                label: "Parques",
+                                borderColor: "red",
+                                fill: false,
+                                pointRadius: 2
+                            },
+                            { 
+                                data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                                label: "Restaurantes",
+                                borderColor: "green",
+                                fill: false,
+                                pointRadius: 2
+                            },
+                            { 
+                                data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                                label: "Hoteles",
+                                borderColor: "blue",
+                                fill: false,
+                                pointRadius: 2
+                            },
+                            { 
+                                data: [400,600,1500,3500,6200,3800,2900,1700,120,130],
+                                label: "Transporte",
+                                borderColor: "yellow",
+                                fill: false,
+                                pointRadius: 2
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                    }
+                });
+            }
+        
+            //Gráfico Stacked
+            function grafico_stacked(){
+                new Chart("myBarChart", {
+                    type: 'bar',
+                    data: {
+                        labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre"],
+                        datasets: [
+                            {
+                                label: 'Ganancias',
+                                backgroundColor: "blue",
+                                data: [286.27, 218.91, 101.04, 151.56, 84.20, 117.88, 235.75, 336.79, 151.56],
+                                stack: 'Stack 0',
+                            },
+                            {
+                                label: 'Pérdidas',
+                                backgroundColor: "rgba(192,205,218)",
+                                data: [75.40, 98.33, 54.69, 65.69, 55.21, 74.36, 89.36, 78.12, 68.36],
+                                stack: 'Stack 0',
+                            },
+                        ],
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        interaction: {
+                            intersect: false,
+                        },
+                        scales: {
+                            x: {
+                                stacked: true,
+                            },
+                            y: {
+                                stacked: true
+                            }
+                        },
+                        legend: {
+                            display: false,
+                            position: 'buttom'
+                        },
+                        responsive: true
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/table.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Marketing - Paquetes</title>
+        <style>
+            .nav-link {
+                color: #6C757D;
+            }
+
+            #paquetes {
+                color: #fff;
+                background-color: #007BFF;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="d-flex flex-column flex-shrink-0 p-3 text-secondary min-vh-100 bg-light" id="navbar" style="width: 280px;">
+                    
+                </div>
+                <div class="col py-3">
+                    <nav class="navbar navbar-light bg-light row" id="header">
+
+                    </nav>
+                    <div class="content">
+                        <div class="row m-auto">
+                            <div class="col-8">
+                                <h3>Paquetes Registrados</h3>
+                            </div>
+                            <div class="col-2">
+                                <button type="button" id="verInforme" class="btn btn-primary" data-toggle="modal">
+                                    <i class="bi bi-cloud-download col-2"></i> Generar Informe
+                                </button>
+                            </div>
+                            <div class="col-2">
+                                <a href="insert.html" id="verInforme" class="btn btn-primary text-light" data-toggle="modal">
+                                    <i class="bi bi-plus-circle-fill"></i> Nuevo Paquete
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content-table">
+                            <table class="table table-striped table-hover bg-light text-center">
+                                <thead class="bg-primary text-light">
+                                    <tr>
+                                        <th>Descripción</th>
+                                        <th>Ubicación</th>
+                                        <th>Puntuación</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Safari por los Médanos de Coro con cena de barbacoa</td>
+                                        <td>Coro</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tour por Catedral de Valencia</td>
+                                        <td>Valencia</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recorrido y visita por Playa la Punta</td>
+                                        <td>Margarita</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tour y transporte por el Teleférico</td>
+                                        <td>Caracas</td>
+                                        <td>4 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tour de comida por Casa Natal del Libertador</td>
+                                        <td>Caracas</td>
+                                        <td>4 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bus ticket a Hesperia WTC Valencia</td>
+                                        <td>Valencia</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tour y barbacoa en Monte Roraima</td>
+                                        <td>Parque Nacional Canaima</td>
+                                        <td>5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Entrada y espectáculo en Parque Nacional el Avila</td>
+                                        <td>Caracas</td>
+                                        <td>4 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Visita guiada al Museo de Arte Contemporaneo</td>
+                                        <td>Caracas</td>
+                                        <td>5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Espectáculo en Teatro Baralt</td>
+                                        <td>Maracaibo</td>
+                                        <td>4.5 <i class="bi bi-star-fill text-warning"></i></td>
+                                        <td class="row">
+                                            <div class="col">
+                                                <a href="#" class="col btn btn-primary text-light"><i class="bi bi-filetype-pdf"></i></a>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="verPaquete"><i class="bi bi-eye"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="editPaquete"><i class="bi bi-pen"></i></button>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"><i class="bi bi-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="content-pagination">
+                            <nav aria-label="Page navigation example" class="navigation">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de Hotel -->
+        <div class="modal fade" id="infoPaquete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Safari por el desierto de Dubái con cena de barbacoa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half  text-warning"></i> 2908 opiniones</p>
+                        <p><i class="bi bi-geo-alt-fill text-primary"></i> Parque Nacional Los Medanos de Coro, Coro 4101, Venezuela</p>
+                        <img src="../img/coro-1.jpg" alt="..." class="img-thumbnail col">
+                        <div class="row">
+                            <img src="../img/coro-2.jpg" alt="..." class="rounded col" width="50px" height="120px">
+                            <img src="../img/coro-3.jpg" alt="..." class="rounded col" width="50px" height="120px">
+                        </div>
+                        <p>El Parque Nacional Médanos de Coro se encuentra ubicado en el estado Falcón, al noroeste de Venezuela. El origen de sus inmensas montañas de arena es la consecuencia de la Erosión Eólica dada sobre las rocas, las cuales con el pasar del tiempo son partidas en miles de pedazos pequeños hasta convertirse en arenilla.</p>
+                        <h6>Componentes del paquete</h6>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-universal-access"></i> Sandboard</p>
+                            <p class="col text-primary"><i class="bi bi-bus-front-fill"></i> Transporte ida y vuelta</p>
+                        </div>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-camera2"></i> Sesión fotográfica</p>
+                            <p class="col text-primary"><i class="bi bi-person-walking"></i> Recorrido guiado</p>
+                        </div>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-fire"></i> Barbacoa</p>
+                            <p class="col text-primary"><i class="bi bi-cup-straw"></i> Bebidas</p>
+                        </div>
+                        <div class="row">
+                            <p class="col text-primary"><i class="bi bi-person-wheelchair"></i> Adaptado personas de movilidad reducida</p>
+                        </div>
+                        <h6>Información</h6>
+                        <div class="row">
+                            <p class="col">Precio: 150$</p>
+                            <p class="col">Duración: 6 horas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de Edit -->
+        <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Componente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="needs-validation form" novalidate>
+                            <div class="form-row row">
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Descripción</label>
+                                <input type="text" name="descripcion_comp" class="form-control" id="validationCustom01" placeholder="Descripción" value="Wifi Gratis" required>
+                                <div class="valid-feedback">
+                                  ¡Bien hecho!
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom02">Tipo</label>
+                                <select name="tipo_comp" class="form-control" id="validationCustom02" required>
+                                  <option value="Hotelería" selected>Hotelería</option>
+                                  <option value="Restaurante">Restaurante</option>
+                                  <option value="Atracciones">Atracciones</option>
+                                  <option value="Transporte">Transporte</option>
+                                  <option value="Hotelería / Restaurante">Hotelería / Restaurante</option>
+                                  <option value="Hotelería / Atracciones">Hotelería / Atracciones</option>
+                                  <option value="Hotelería / Transporte">Hotelería / Transporte</option>
+                                  <option value="Restaurante / Atracciones">Restaurante / Atracciones</option>
+                                  <option value="Restaurante / Transporte">Restaurante / Transporte</option>
+                                  <option value="Atracciones / Transporte">Atracciones / Transporte</option>
+                                  <option value="Hotelería / Restaurante / Atracciones">Hotelería / Restaurante / Atracciones</option>
+                                  <option value="Hotelería / Restaurante / Transporte">Hotelería / Restaurante / Transporte</option>
+                                  <option value="Hotelería / Atracciones / Transporte">Hotelería / Atracciones / Transporte</option>
+                                  <option value="Restaurante / Atracciones / Transporte">Restaurante / Atracciones / Transporte</option>
+                                  <option value="Hotelería / Restaurante / Atracciones / Transporte">Hotelería / Restaurante / Atracciones / Transporte</option>
+                                </select>
+                                <div class="valid-feedback">
+                                  Debe seleccionar una opción
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row row">
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">Precio</label>
+                                <input type="text" class="form-control" id="validationCustom03" placeholder="Precio" value="20$" required>
+                                <div class="invalid-feedback">
+                                  El campo no puede estar vacío
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom04">Reembolso</label>
+                                <select name="reembolso_comp" id="validationCustom04" class="form-control" required>
+                                  <option value="Si">Si</option>
+                                  <option value="No" selected>No</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Debe seleccionar una opción
+                                </div>
+                              </div>
+                            </div>
+                            <div class="btn-edit">
+                                <button class="btn btn-success btn-edit" type="submit">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal de informe -->
+        <div class="modal fade" id="informe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Reporte</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="reporte_general.php" method="GET">
+                        <div class="modal-body row">
+                            <div class="col">
+                                <label for="fecha_ini">Inicio</label>
+                                <input type="date" class="form-control" name="fecha_ini" id="fecha_ini">
+                            </div>
+                            <div class="col">
+                            <label for="fecha_final">Fin</label>
+                                <input type="date" class="form-control" name="fecha_final" id="fecha_final">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Generar Informe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            $("#navbar").load("../bars/navbar.html");
+            $("#header").load("../bars/header.html");
+            $(document).ready(function() {
+                $("#verPaquete").click(function() {
+                    $("#infoPaquete").modal('show');
+                });
+            });
+            $(document).ready(function() {
+                $("#editPaquete").click(function() {
+                    $("#edit").modal('show');
+                });
+            });
+            $(document).ready(function() {
+                $("#verInforme").click(function() {
+                    $("#informe").modal('show');
+                });
+            });
+        </script>
+    </body>
+</html>

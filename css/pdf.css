@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    margin: 3px;
+}
+
+.barra-superior {
+    background-color: #FCC742;
+    width: 100%;
+    height: 10px;
+}
+
+.titulo {
+    background-color: #002060;
+    width: 90%;
+    color: #fff;
+    height: 100px;
+    padding: 10px;
+}
+
+.titulo h3 {
+    margin-left: 5%;
+}
+
+.overview {
+    height: 200px;
+    width: 90%;
+    margin: 1%;
+}
+
+.overview h5{
+    color: #002060;
+}
+
+.info-general {
+    width: 100%;
+}
+
+.services {
+    background-color: #F2F2F2;
+    height: 250px;
+    width: 100%;
+    padding: 2%;
+}
+
+.traffic { 
+    height: 400px;
+    padding: 2%;
+}
+
+.traffic-graphic {
+    width: 20%;
+}
+
+.traffic h5 {
+    color: #002060;
+}
+
+.traffic .bi-wifi { color: #b91d47; }
+.traffic .bi-p-circle { color: #00aba9; }
+.traffic .bi-cup-hot { color: #2b5797; }
+.traffic .bi-basket { color: #e8c3b9; }
+.traffic .bi-person-add { color: #1e7145; }
+.traffic .bi-cup-straw { color: #FCC742; }
+.traffic .bi-person-wheelchair { color: #6B2BEC; }
+
+.valores { 
+    background-color: #FCC742;
+    height: 900px;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.valores i{ 
+    font-size: 50px;
+    color: #002060;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: right;
+}
+
+.valores-text {
+    font-size: 20px;
+    text-align: left;
+}
+
+.barra-inferior {
+    background-color: #002060;
+    width: 100%;
+    height: 10px;
+}
+
+.estadisticas {
+    background-color: #F2F2F2;
+    padding: 2%;
+}
+
+.estadisticas h6{
+    text-align: center;
+}
